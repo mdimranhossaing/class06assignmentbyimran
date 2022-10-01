@@ -1,0 +1,251 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+th,
+td {
+  white-space: nowrap;
+}
+
+.table {
+  box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
+}
+
+.create-user-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-user form {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 20px 20px rgba(0,0,0, 0.3);
+  max-width: 320px;
+}
+
+body.login,
+body.registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #8145FF, #5530EF);
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main {
+  background: linear-gradient(135deg, #8145FF, #5530EF);
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+.inner-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 320px;
+  box-shadow: 0 20px 20px rgba(0,0,0, 0.3);
+}
+
+.inner-box .title {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.inner-box form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.inner-box form .field {
+  margin-bottom: 20px;
+}
+
+.inner-box form .field .input-field {
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.inner-box form .field .error {
+  font-size: 0.8em;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: 500;
+  color:rgb(245, 108, 98)
+}
+
+.inner-box form .keep-and-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.inner-box form .keep-and-link .keep {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inner-box form .keep-and-link .keep label {
+  font-size: 0.8em;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.inner-box form .keep-and-link .link a {
+  text-decoration: none;
+  font-size: 0.8em;
+  color: #777;
+  text-transform: capitalize;
+}
+
+.inner-box form input[type="submit"] {
+  background-color: #399DFF;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.inner-box .or {
+  position: relative;
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.inner-box .or::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: '';
+  background-color: #ccc;
+  width: 42%;
+  height: 1px;
+}
+
+.inner-box .or::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: '';
+  background-color: #ccc;
+  width: 42%;
+  height: 1px;
+}
+
+.inner-box .social-buttons {
+  margin-bottom: 70px;
+}
+
+.inner-box .social-buttons ul {
+  display: flex;
+  list-style: none;
+  width: 70%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.inner-box .social-buttons ul li a i {
+  font-size: 1em;
+  color: white;
+  width: 40px;
+  height: 40px;
+  padding: 4px 7px;
+  border-radius: 50%;
+  
+}
+
+.inner-box .social-buttons ul li a i.bi-facebook {
+  background-color: #3B5999;
+  
+}
+
+.inner-box .social-buttons ul li a i.bi-google {
+  background-color: #DC4E42;
+  
+}
+
+.inner-box .social-buttons ul li a i.bi-twitter {
+  background-color: #00ACEE;
+  
+}
+
+.inner-box .another-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.inner-box .another-link span {
+  font-size: 0.7em;
+  color: #777;
+}
+
+.inner-box .another-link span::first-letter,
+.inner-box .another-link a::first-letter {
+  text-transform: capitalize;
+}
+
+.inner-box .another-link a {
+  font-size: 0.7em;
+  color: #399DFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* login area end */
+
+/* registration area start */
+
+.registration .inner-box {
+  max-width: 320px;
+}
+
+.registration .links {
+  margin-bottom: 20px;
+}
+
+.registration .links .form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.registration .links .form-check label {
+  font-size: 0.8em;
+  margin-top: -3px;
+}
+
+.registration .links .form-check label a {
+  text-decoration: none;
+  color: #00ACEE;
+}
