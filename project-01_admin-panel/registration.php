@@ -6,6 +6,10 @@ session_start();
 // functions file including
 if (file_exists(dirname(__FILE__) . './functions.php')) {
   require_once(dirname(__FILE__) . './functions.php');
+
+  if (user_logged_in()) {
+    header('location: admin.php');
+  }
 }
 
 // registration process
@@ -75,7 +79,7 @@ if (isset($_REQUEST['signup'])) {
     // create query
     if ($connection->query($sql) === true) {
 
-      $_SESSION['success_message'] = 'Thank you for registration';
+      // $_SESSION['registration_success'] = 'Thank you for registration';
       header('location: admin.php');
     } else {
       $message = 'Error: ' . $sql . "<br>" . $connection->error . '';
@@ -160,6 +164,9 @@ if (isset($_REQUEST['signup'])) {
     </div>
 
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="./assets/js/scripts.js"></script>
 
 </body>
 

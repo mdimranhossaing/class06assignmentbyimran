@@ -13,3 +13,13 @@ function test_input($data)
   $data = htmlspecialchars($data);
   return $data;
 }
+
+function user_logged_in() {
+
+  if (isset($_SESSION['login_success']) || isset($_COOKIE['keep'])) {
+    return true;
+  } else {
+    return false;
+  }
+  
+}

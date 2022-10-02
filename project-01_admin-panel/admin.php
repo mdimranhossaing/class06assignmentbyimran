@@ -1,5 +1,11 @@
 <?php
+
+session_start();
 require_once(dirname(__FILE__) . './header.php');
+
+if ( !user_logged_in() ) {
+  header('location: index.php');
+}
 
 $sql = "SELECT * FROM `users`";
 $results = $connection->query($sql);

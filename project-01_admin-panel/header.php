@@ -37,6 +37,7 @@
             <li class="nav-item"><a class="nav-link" href="./create_user.php">Create users</a></li>
             <li class="nav-item"><a class="nav-link" href="./index.php">Sign in</a></li>
             <li class="nav-item"><a class="nav-link" href="./registration.php">Sign up</a></li>
+            <li class="nav-item"><a class="nav-link" href="./logout.php">Logout</a></li>
           </ul>
         </div>
 

@@ -1,7 +1,13 @@
 <?php
 
+session_start();
+
 // require functions file
 require_once(dirname(__FILE__) . './functions.php');
+
+if (user_logged_in()) {
+  header('location: admin.php');
+}
 
 // login prossec
 if (isset($_REQUEST['login'])) {
@@ -22,6 +28,10 @@ if (isset($_REQUEST['login'])) {
       if ( !empty($password) ) { // password is not empty
         while($row = $password_query->fetch_assoc()) {
           if (md5($password) == $row['password']) {
+            $_SESSION['login_success'] = 'Thank you for login';
+            if (isset($_REQUEST['keep'])) {
+              setcookie('keep', 'keeped', time() + (86400 * 1));
+            }
             header('location: admin.php');
           } else {
             $error['password'] = 'Password not match, Please insert currect password.';
@@ -106,9 +116,9 @@ if (isset($_REQUEST['login'])) {
 
     <div class="social-buttons">
       <ul>
-        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-        <li><a href="#"><i class="bi bi-google"></i></a></li>
-        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+        <li><a><i class="bi bi-facebook"></i></a></li>
+        <li><a><i class="bi bi-google"></i></a></li>
+        <li><a><i class="bi bi-twitter"></i></a></li>
       </ul>
     </div>
 
