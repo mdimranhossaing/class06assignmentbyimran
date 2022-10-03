@@ -14,6 +14,7 @@ function test_input($data)
   return $data;
 }
 
+// check user login or signup
 function user_logged_in() {
 
   if (isset($_SESSION['login_success']) || isset($_COOKIE['keep'])) {
@@ -22,4 +23,14 @@ function user_logged_in() {
     return false;
   }
   
+}
+
+// set_link function
+function set_link($file_name) {
+  
+  $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+
+  $directory_name = dirname($actual_link);
+
+  return $directory_name . '/' . $file_name . '.php';
 }

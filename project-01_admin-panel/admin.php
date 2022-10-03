@@ -9,6 +9,7 @@ if ( !user_logged_in() ) {
 
 $sql = "SELECT * FROM `users`";
 $results = $connection->query($sql);
+
 ?>
 
 <main class="main py-5">
@@ -41,12 +42,14 @@ $results = $connection->query($sql);
                   <td><?php echo $row['email']; ?></td>
                   <td><?php echo $row['password']; ?></td>
                   <td>
-                    <a class="btn btn-success btn-sm me-2" href="#">Edit</a>
-                    <a class="btn btn-danger btn-sm" href="#">Delete</a>
+                    <a class="btn btn-success btn-sm me-2" href="<?php echo set_link('update'); ?>?user_id=<?php echo $row['user_id']; ?>">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="<?php echo set_link('delete'); ?>?delete_id=<?php echo $row['user_id']; ?>">Delete</a>
                   </td>
                 </tr>
 
             <?php endwhile;
+            } else {
+              header('location: logout.php');
             }
             ?>
 

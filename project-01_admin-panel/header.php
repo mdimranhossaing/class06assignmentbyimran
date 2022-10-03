@@ -34,7 +34,7 @@
         <div id="main-menu" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link active" href="./admin.php">Show users</a></li>
-            <li class="nav-item"><a class="nav-link" href="./create_user.php">Create users</a></li>
+            <li class="nav-item"><a class="nav-link" href="./update.php">Update users</a></li>
             <li class="nav-item"><a class="nav-link" href="./index.php">Sign in</a></li>
             <li class="nav-item"><a class="nav-link" href="./registration.php">Sign up</a></li>
             <li class="nav-item"><a class="nav-link" href="./logout.php">Logout</a></li>
